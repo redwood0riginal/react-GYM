@@ -1,0 +1,62 @@
+.banner-section {
+	background-image: url('../../assets/img/banner-bg.jpg');
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	height: 550px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+    margin-bottom: 70px;
+}
+
+.bs-text.service-banner .bt-tips {
+	margin-bottom: 35px;
+}
+
+.bs-text h2 {
+	font-size: 48px;
+	color: #ffffff;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+}
+
+.bs-text .bt-tips {
+	font-size: 20px;
+	color: #c4c4c4;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 45px;
+}
+
+.bs-text .primary-btn {
+	background: transparent;
+	border: 2px solid #f36100;
+    padding: 15px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.2s ease;
+}
+.bs-text .primary-btn:hover{
+    background-color: #f36100;
+}
+.bs-text .play-btn {
+	display: inline-block;
+	height: 70px;
+	width: 70px;
+	background: #f36100;
+	border-radius: 50%;
+	line-height: 70px;
+	text-align: center;
+	font-size: 36px;
+	color: #ffffff;
+}

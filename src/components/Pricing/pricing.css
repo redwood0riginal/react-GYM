@@ -1,0 +1,55 @@
+.pricing-section {
+    background-image: url('../.././assets/img/pricing/background.jpg');
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .pricing-cta {
+    transition: all 0.4s;
+    margin-top: 4rem;
+  }
+  
+  .pricing-cta::after {
+    border: 2px solid #f36100;
+  
+  }
+  
+  .pricing-cta:hover:after {
+    border: 2px solid #f36100;
+  }
+  
+  button.btn.purchase-btn{
+    border-radius: 0px !important;
+    background-color: #f36100;
+	border: 2px solid #f36100;
+    padding: 10px;
+    font-size: 20px;
+    color: #ffffff;
+    transition: background-color 0.2s ease;
+  }
+
+button.btn.purchase-btn:hover{
+    background-color: #ffffff;
+    color: black;
+}
+
+.dollar{
+  font-size: 25px;
+  color: #f36100;
+}
+
+.per-month{
+  font-size: 25px;
+  color: #f36100;
+}
+
+.pricing-chart{
+  font-size: 25px;
+  color: #f36100;
+}
+
+.pricing-chart span{
+  color: #000000;
+}

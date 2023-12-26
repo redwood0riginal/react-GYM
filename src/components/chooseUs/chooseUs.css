@@ -1,0 +1,73 @@
+
+.section-title{
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.section-title span {
+    font-size: 16px;
+    color: #f36100;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.section-title h2 {
+    color: #000000;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+.choseus-section {
+	background: #fff;
+	padding-bottom: 70px;
+	padding-top: 70px;
+
+}
+
+.cs-item {
+	text-align: center;
+	margin-bottom: 30px;
+    background-color: #000000;
+    padding: 20px;
+    height: 350px;
+    border-radius: 5px;
+	overflow: hidden;
+}
+
+.cs-item:hover span {
+	background: #f36100;
+	color: #ffffff;
+}
+
+.cs-item span {
+	height: 70px;
+	width: 70px;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+	display: inline-block;
+	color: #f36100;
+	line-height: 90px;
+	text-align: center;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.cs-item h4 {
+	color: #ffffff;
+	font-size: 22px;
+	font-weight: 600;
+	margin-top: 24px;
+	margin-bottom: 16px;
+}
+
+.cs-item p{
+        font-size: 14px;
+        font-family: "Muli", sans-serif;
+        color: #a9a9a9;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 0 0 15px 0;
+}

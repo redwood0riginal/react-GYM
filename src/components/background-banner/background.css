@@ -1,0 +1,28 @@
+.bg-banner-section {
+	background-image: url('./bg-banner.jpg');
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	height: 300px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+    margin-bottom: 0;
+}
+
+
+
+.bs-text h2 {
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 200px;
+}
+

@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "role": "admin",
+      "name": "admin",
+      "email": "admin@example.com",
+      "phone": "0662477882",
+      "password": "adminpass",
+      "created_at": "2023-12-24",
+      "updated_at": null
+    },
+    {
+      "id": "034a00e2-a63d-4d7a-8c18-882191350d58",
+      "role": "member",
+      "name": "Ahmed Tiguini",
+      "email": "Ahmedtiguini18@gmail.com",
+      "phone": "662477882",
+      "password": "ahmed2016",
+      "created_at": "2023-12-24",
+      "updated_at": null,
+      "bookings": [
+        "Meditation",
+        "Boxing",
+        "Mma",
+        "Crossfit",
+        "Yoga"
+      ]
+    },
+    {
+      "id": "a76eef79-3274-48ab-874a-f0c1340cb6bd",
+      "role": "member",
+      "name": "Ahmed Tiguini",
+      "email": "Ahmedtiguini16@gmail.com",
+      "phone": "0662477885",
+      "password": "ahmed2018",
+      "created_at": "2023-12-24",
+      "updated_at": null,
+      "bookings": []
+    }
+  ],
+  "gymClasses": [
+    {
+      "classId": "1",
+      "className": "Yoga",
+      "schedule": "Monday, 8:00 AM",
+      "capacity": 20,
+      "bookedMembers": []
+    },
+    {
+      "classId": "2",
+      "className": "CrossFit",
+      "schedule": "Wednesday, 6:00 PM",
+      "capacity": 15,
+      "bookedMembers": []
+    },
+    {
+      "classId": "3",
+      "className": "Spinning",
+      "schedule": "Friday, 7:30 AM",
+      "capacity": 25,
+      "bookedMembers": []
+    }
+  ]
+}

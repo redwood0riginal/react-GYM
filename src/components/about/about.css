@@ -1,0 +1,88 @@
+.about-video {
+    background-image: url('../../assets/img/about-us.jpg');
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	height: 640px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+
+.about-text {
+	background: #0a0a0a;
+	height: 640px;
+	padding: 120px 70px 0 70px;
+}
+
+.about-text .section-title {
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+.about-text .at-desc {
+	margin-bottom: 27px;
+}
+
+.about-text .at-desc p {
+	color: #c4c4c4;
+}
+
+.about-text .about-bar .ab-item {
+	margin-bottom: 34px;
+}
+
+.about-text .about-bar .ab-item p {
+	color: #ffffff;
+	margin-bottom: 13px;
+}
+
+.about-text .about-bar .ab-item .barfiller {
+	background: #2d2d2d;
+	height: 5px;
+	border: none;
+	margin-bottom: 0;
+}
+
+.about-text .about-bar .ab-item .barfiller .tip {
+	margin-top: 0;
+	padding: 0;
+	font-size: 14px;
+	color: #ffffff;
+	background: transparent;
+	position: initial !important;
+	float: right;
+	margin-top: -40px;
+}
+
+.about-text .about-bar .ab-item .barfiller .tip:after {
+	display: none;
+}
+
+
+@media (max-width: 576px) {
+    .d-sm-none-custom {
+      display: none !important;
+    }
+  }
+
+.trainers-section{
+    background-color: #0a0a0a;
+  }
+
+.coaches,.trainer-name{
+    color: #F36100;
+}
+
+.trainer-name{
+    font-size: 25px;
+    font-weight: 700;
+}

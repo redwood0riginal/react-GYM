@@ -1,0 +1,16 @@
+.bmi-section {
+    background-image: url('./breadcrumb-bg.jpg');
+    object-fit: cover;
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    margin-bottom: 100px;
+    overflow-x: hidden;
+  }
+
+  .bmi-text, .bmi-output, .msg-output {
+    color: #f36100 !important;
+  }
+  .calculate{
+    background-color: #f36100 !important;
+  }

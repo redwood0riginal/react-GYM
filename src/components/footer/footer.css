@@ -1,0 +1,139 @@
+:root{
+-webkit-text-size-adjust: 100%;
+-webkit-tap-highlight-color: transparent;
+--blue: #007bff;
+--indigo: #6610f2;
+--purple: #6f42c1;
+--pink: #e83e8c;
+--red: #dc3545;
+--orange: #fd7e14;
+--yellow: #ffc107;
+--green: #28a745;
+--teal: #20c997;
+--cyan: #17a2b8;
+--white: #fff;
+--gray: #6c757d;
+--gray-dark: #343a40;
+--primary: #007bff;
+--secondary: #6c757d;
+--success: #28a745;
+--info: #17a2b8;
+--warning: #ffc107;
+--danger: #dc3545;
+--light: #f8f9fa;
+--dark: #343a40;
+--breakpoint-xs: 0;
+--breakpoint-sm: 576px;
+--breakpoint-md: 768px;
+--breakpoint-lg: 992px;
+--breakpoint-xl: 1200px;
+--font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+--font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+.footer-section {
+	background: #000000;
+	padding-top: 50px;
+}
+
+.fs-about {
+	margin-bottom: 30px;
+}
+
+.fs-about .fa-logo {
+	margin-bottom: 30px;
+}
+
+.fs-about .fa-logo a {
+	display: inline-block;
+}
+
+.fs-about p {
+	line-height: 26px;
+	color: #c4c4c4;
+}
+
+.fs-about .fa-social a {
+	font-size: 14px;
+	color: #bebebe;
+	margin-right: 10px;
+}
+.fs-about .fa-social a:hover{
+	color: #f36100;
+  } 
+
+.fs-about .fa-social a:last-child {
+	margin-right: 0;
+}
+
+.fs-widget {
+	margin-bottom: 30px;
+}
+
+.fs-widget h4 {
+	color: #ffffff;
+	font-weight: 600;
+	margin-bottom: 18px;
+}
+
+.fs-widget ul li {
+	list-style: none;
+}
+
+.fs-widget ul li a {
+	font-size: 14px;
+	color: #c4c4c4;
+	line-height: 30px;
+}
+
+.fs-widget .fw-recent {
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #1a1a1a;
+}
+
+.fs-widget .fw-recent:last-child {
+	padding-bottom: 0;
+	border: none;
+}
+
+.fs-widget .fw-recent h6 {
+	margin-bottom: 6px;
+}
+
+.fs-widget .fw-recent h6  {
+	color: #c4c4c4;
+	letter-spacing: 0.5px;
+}
+
+.fs-widget .fw-recent ul li {
+	font-size: 12px;
+	color: #4d4d4d;
+	display: inline-block;
+	margin-right: 25px;
+	position: relative;
+}
+
+.fs-widget .fw-recent ul li:last-child:after {
+	display: none;
+}
+
+.fs-widget .fw-recent ul li:after {
+	position: absolute;
+	right: -16px;
+	top: 0;
+	content: "|";
+}
+
+.copyright-text {
+	font-size: 14px;
+	color: #c4c4c4;
+	letter-spacing: 0.5px;
+	border-top: 1px solid #1a1a1a;
+	padding: 25px 0;
+	margin-top: 15px;
+}
+
+.copyright-text a,
+.copyright-text .heart-icon{
+	color: #f36100;
+}

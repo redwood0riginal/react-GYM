@@ -1,0 +1,97 @@
+.nav-link.btn{
+  background-color: #f36100;
+  border: #f36100 solid 1px;
+  margin-right: 10px;
+  max-height: 40px;
+  min-width: 80px;
+}
+.nav-link.btn:hover{
+  border: #f36100 solid 1px;
+}
+
+.navbar.transparent .btn-outline-success{
+  border: #f36100 solid 1px;
+  color: #fff;
+}
+.navbar-brand img{
+  width: 150px;
+  padding: 10px;
+}
+
+form .btn-outline-success{
+  border: #f36100 solid 1px;
+  color: black;
+}
+form .btn-outline-success:hover{
+
+  background-color: #f36100;
+  border: #f36100 solid 1px;
+}
+
+
+.navbar.opaque .navbar-brand img{
+  background-color: black;
+}
+
+.navbar {
+  transition: background-color  0.2s ease-in;
+}
+
+.navbar.transparent {
+  background-color: rgba(0, 0, 0, 0.9) !important; 
+}
+
+.navbar.opaque {
+  background-color: #fff !important;
+}
+
+.navbar.transparent .nav-link{
+  color: #fff !important;
+}
+
+.navbar.transparent .navbar-toggler{
+  background-color: #fff;
+}
+
+.fa-social{
+  margin-left: 10px;
+}
+
+.fa-social a {
+	font-size: 14px;
+	color: #bebebe;
+	margin-right: 10px;
+  transition: 0.3s ease;
+}
+
+.fa-social a:hover{
+  color: #f36100;
+} 
+
+.fa-social a:last-child {
+	margin-right: 0;
+}
+
+.nav-NavLink{
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-link.active{
+  background-color: #f36100;
+}
+
+.user-icon a{
+  color: #f36100;
+  transition: 0.2s;
+  padding: 5px 10px;
+}
+
+.user-icon a:hover{
+  color: #ffffff;
+}
+
+.user-icon a.active{
+  background-color: #f36100;
+  color: rgb(255, 255, 255);
+}
