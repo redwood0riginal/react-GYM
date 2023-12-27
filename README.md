@@ -19,7 +19,7 @@ Trainer Profiles: Learn more about the gym's trainers, their expertise, and clas
 Getting Started!
 
 Clone the repository:
-git clone https://github.com/yourusername/gym-react.git
+git clone https://github.com/redwood0riginal/gym-react.git
 
 Install dependencies:
 cd gym-react
