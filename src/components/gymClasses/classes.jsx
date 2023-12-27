@@ -1,9 +1,17 @@
+import React, { useEffect, useState } from "react"; // Import useState from React
 import Background from "../background-banner/background";
 import ClasseBox from "./classeBox";
-
 import "./classes.css";
+import axios from "axios";
 
 const Classes = () => {
+  const [classes, setClasses] = useState([]); // Use useState for managing state
+
+  useEffect(() => {
+    const res = axios.get("http://localhost:3000/gymClasses");
+    res.then((data) => setClasses(data.data));
+  }, []);
+
   return (
     <>
       <Background title={"Classes"} />
@@ -27,78 +35,15 @@ const Classes = () => {
           </div>
           {/* pricing boxes */}
           <div className="d-flex justify-content-center gap-4 mt-5 flex-wrap">
-            <ClasseBox
-              img="cycling-bg"
-              title="Cycling"
-              trainer="Dorian Yate"
-              date="Wed: 9:00 am"
-            />
-            <ClasseBox
-              img="meditation-bg"
-              title="Meditation"
-              trainer="Maria Mich"
-              date="FRi: 9:00 am"
-            />{" "}
-            <ClasseBox
-              img="box-bg"
-              title="Boxing"
-              trainer="John Flex"
-              date="Tue: 4:00 pm"
-            />{" "}
-            <ClasseBox
-              img="karate-bg"
-              title="Karate"
-              trainer="David Rich"
-              date="Sat: 9:00 am"
-            />{" "}
-            <ClasseBox
-              img="powerlift-bg"
-              title="Power Lifting"
-              trainer="Larry Wheels"
-              date="Mon: 5:00 pm"
-            />{" "}
-            <ClasseBox
-              img="workout-bg"
-              title="Workout"
-              trainer="Shawn Ray"
-              date="Sun: 10:00 am"
-            />{" "}
-            <ClasseBox
-              img="crossfit-bg"
-              title="Crossfit"
-              trainer="Jenifer Alex"
-              date="Wed: 12:00 pm"
-            />{" "}
-            <ClasseBox
-              img="running-bg"
-              title="Running"
-              trainer="Zinia Zessy"
-              date="Fri: 7:00 am"
-            />{" "}
-            <ClasseBox
-              img="bodybuilding-bg"
-              title="Body Building"
-              trainer="Jake Paul"
-              date="Mon: 9:00 pm"
-            />{" "}
-            <ClasseBox
-              img="mma-bg"
-              title="Mma"
-              trainer="Becky Lynch"
-              date="Fri: 8:00 am"
-            />{" "}
-            <ClasseBox
-              img="yoga-bg"
-              title="Yoga"
-              trainer="Marta Mich"
-              date="Wed: 9:00 am"
-            />{" "}
-            <ClasseBox
-              img="fitness-bg"
-              title="Fitness"
-              trainer="Adama Traore"
-              date="Sat: 15:00 pm"
-            />
+            {classes.map((gymClass) => (
+              <ClasseBox
+                key={gymClass.id}
+                img="cycling-bg"
+                title={gymClass.className}
+                trainer={gymClass.trainer}
+                date={gymClass.schedule}
+              />
+            ))}
           </div>
         </div>
       </section>
