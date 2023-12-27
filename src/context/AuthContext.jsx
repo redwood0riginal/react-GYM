@@ -1,31 +1,34 @@
-import axios, { Axios } from "axios";
+import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [userID, setUserID] = useState(null);
   const [error, setError] = useState(null);
   const [user, setUser] = useState({});
 
   useEffect(() => {
-    // Check if the user is logged in using localStorage
     const storedIsAuthenticated = localStorage.getItem("isLoggedIn");
     const storedUserID = localStorage.getItem("userId");
-    if (storedIsAuthenticated === "true" && storedUserID ) {
-      setIsAuthenticated(true);
-      setUserID(storedUserID);
+
+    if (storedIsAuthenticated === "true" && storedUserID) {
       axios
         .get(`http://localhost:3000/users/${storedUserID}`)
-        .then((response) => setUser(response.data[0]));
-        console.log(user);
+        .then((response) => {
+          const userData = response.data[0];
+          setUser(userData);
+          setIsAdmin(userData.role === "admin");
+          setIsAuthenticated(true);
+          setUserID(storedUserID);
+        })
+        .catch((error) => {
+          console.error("Error fetching user data:", error);
+        });
     }
-  }, [user]);
-
-  console.log(user);
-  console.log(userID);
-
+  }, []);
 
   const login = async (email, password) => {
     try {
@@ -48,28 +51,32 @@ export const AuthProvider = ({ children }) => {
 
       if (user) {
         setIsAuthenticated(true);
-        setUserID(user.id); // Set user ID from the response
+        setUserID(user.id);
+        setIsAdmin(user.role === "admin"); // Update isAdmin based on the user's role
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("userId", user.id);
+        localStorage.setItem("isAdmin", user.role === "admin" ? "true" : "false");
         setUser(user);
-        setError(null); // Reset error state if login is successful
+        setError(null);
         return true;
       } else {
         setIsAuthenticated(false);
         setUserID(null);
+        setIsAdmin(false);
         localStorage.setItem("isLoggedIn", "false");
         localStorage.setItem("userId", "");
-
-        setError("Invalid email or password"); // Set error message for incorrect login
+        localStorage.setItem("isAdmin", "false");
+        setError("Invalid email or password");
         return false;
       }
     } catch (error) {
-      console.log("Error occurred while logging in:", error.message);
+      console.error("Error occurred while logging in:", error.message);
       setIsAuthenticated(false);
       setUserID(null);
+      setIsAdmin(false);
       localStorage.setItem("isLoggedIn", "false");
       localStorage.setItem("userId", "");
-
+      localStorage.setItem("isAdmin", "false");
       setError("An error occurred while logging in");
       return false;
     }
@@ -77,14 +84,16 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     setIsAuthenticated(false);
+    setUserID(null);
+    setIsAdmin(false);
     localStorage.setItem("isLoggedIn", "false");
     localStorage.setItem("userId", "");
-
+    localStorage.setItem("isAdmin", "false");
   };
 
   return (
     <AuthContext.Provider
-      value={{ isAuthenticated, userID, login, logout, user, error }}
+      value={{ isAuthenticated, userID, isAdmin, login, logout, user, error }}
     >
       {children}
     </AuthContext.Provider>

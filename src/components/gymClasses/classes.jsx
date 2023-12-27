@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"; // Import useState from React
+import { useEffect, useState } from "react"; // Import useState from React
 import Background from "../background-banner/background";
 import ClasseBox from "./classeBox";
 import "./classes.css";
@@ -8,7 +8,7 @@ const Classes = () => {
   const [classes, setClasses] = useState([]); // Use useState for managing state
 
   useEffect(() => {
-    const res = axios.get("http://localhost:3000/gymClasses");
+    const res = axios.get("http://localhost:3000/classes");
     res.then((data) => setClasses(data.data));
   }, []);
 
@@ -38,7 +38,7 @@ const Classes = () => {
             {classes.map((gymClass) => (
               <ClasseBox
                 key={gymClass.id}
-                img="cycling-bg"
+                img={gymClass.classImage}
                 title={gymClass.className}
                 trainer={gymClass.trainer}
                 date={gymClass.schedule}

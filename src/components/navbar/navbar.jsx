@@ -19,7 +19,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
-  const { isAuthenticated, logout } = useContext(AuthContext);
+  const { isAuthenticated, isAdmin, logout } = useContext(AuthContext);
 
   const handleLogout = () => {
     logout();
@@ -53,7 +53,7 @@ const Navbar = () => {
     };
   }, []);
 
- 
+  console.log(isAdmin);
 
   return (
     <nav className={navbarClass}>
@@ -125,8 +125,18 @@ const Navbar = () => {
                 Contact
               </NavLink>
             </li>
+            {isAdmin && <li className="nav-item">
+              <NavLink
+                to={"/dashboard"}
+                className="nav-link"
+                href="#"
+                onClick={GoTop}
+              >
+                Dashboard
+              </NavLink>
+            </li>}
             {isAuthenticated && <li className="nav-item user-icon m-2">
-              <NavLink to="profile"><FontAwesomeIcon icon={faUser}/></NavLink>
+              <NavLink to="profile"><FontAwesomeIcon icon={faUser} /></NavLink>
             </li>}
           </ul>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
